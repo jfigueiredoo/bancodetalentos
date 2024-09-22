@@ -1,0 +1,175 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #303030;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container geral */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+/* Títulos principais */
+h1 {
+    text-align: center;
+    color: #1a4492;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1a4492;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Labels do formulário */
+label {
+    font-weight: bold;
+    font-size: 22px;
+    color: #1a4492;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Input e textarea */
+input, textarea, select {
+    width: 577px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    width: 600px;
+    border: none;
+    outline: none;
+    background-color: #1a4492;
+    appearance: none;
+    color: rgb(255, 255, 255);
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a4492;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #112e64;
+}
+
+/* Mensagem de sucesso e erro */
+#successMessage {
+    color: green;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#errorMessage {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilo para a tela de login */
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container h2 {
+    color: #1a4492;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Grupo de inputs do login */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a4492;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Botões na tela inicial */
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.botoes button {
+    width: 180px;
+    padding: 10px;
+    background-color: #1a4492;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botoes button:hover {
+    background-color: #112e64;
+}
+
+/* Imagem de logo */
+img {
+    width: 160px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}

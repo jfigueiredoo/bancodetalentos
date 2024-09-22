@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Talentos - FCAP JR</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Login:</label>
+            <input placeholder="Insira seu Login" type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input placeholder="Insira sua senha" type="password" id="password" name="password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+    <div class="container" id="cadastroContainer" style="display: none;">
+        <h1>Cadastro de Perfil</h1>
+        <form id="cadastroForm" action="https://api.sheetmonkey.io/form/9FMFpRUuVgdzn8d9AqHVE7" method="post">
+            <label for="nome">Nome Completo:</label>
+            <input placeholder="José da Silva" type="text" id="nome" name="Nome:" required>
+
+            <label for="contato">Contato:</label>
+            <input placeholder="(xx) xxxxx-xxxx" type="tel" id="contato" name="Contato:" required>
+
+            <label for="email">Email:</label>
+            <input  placeholder="jose@gmail.com" type="email" id="email" name="Email:" required>
+
+            <label for="cargo">Cargo na FCAP JR.:</label>
+            <input placeholder="Gerente de Gestão" type="text" id="cargo" name="Cargo:" required>
+
+            <label for="competencias">Competências:</label>
+            <textarea placeholder="Comunicação, RH, ..." id="competencias" name="Competencias:" rows="4" required></textarea>
+
+            <label for="disponibilidade">Disponibilidade:</label>
+            <select id="disponibilidade" name="Disponibilidade:" required>
+                <option value="Imediata">Imediata</option>
+                <option value="30 dias">30 dias</option>
+                <option value="Indisponível">Indisponível</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="successMessage" style="color: green;"></p>
+        <p id="errorMessageCadastro" style="color: red;"></p>
+    </div>
+
+    <script>
+        // Controle de login
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const correctUsername = 'fcapjr';  // Login correto
+            const correctPassword = '1234';  // Senha correta
+
+            // Verifica se login e senha estão corretos
+            if (username === correctUsername && password === correctPassword) {
+                document.getElementById('loginContainer').style.display = 'none';  // Esconde a seção de login
+                document.getElementById('cadastroContainer').style.display = 'block';  // Mostra a seção de cadastro
+            } else {
+                document.getElementById('errorMessage').textContent = 'Login ou senha incorretos. Tente novamente.';
+            }
+        });
+    </script>
+</body>
+</html>
